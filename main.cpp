@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <fstream>
+#include "game.h"
 
 using namespace std;
 
@@ -17,9 +18,8 @@ int main() {
         words.push_back(str);
     }
 
-    for (int i =0; i < 10; ++i) {
-        cout << words.at(i) << endl;
-    }
+    Game* game = new Game(words);
+    game->PlayGame();
 
     return 0;
 }
