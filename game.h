@@ -14,11 +14,13 @@ class Game {
         void PlayGame();
         string GenerateWord();
         bool EvaluateInput(string wordInput);
+        void GenerateHint();
 
     private: 
         int tries;
         string computerWord;
         vector<string> wordList;
+        vector<int> correctLetters;
 };
 
 #endif
