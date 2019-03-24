@@ -90,9 +90,9 @@ bool Game::EvaluateInput(string wordInput) {
 string Game::GenerateWord() {
 
     int length = this->wordList.size();
-    int random = rand() % length;
-    cout << "RANDOM: " << random << endl;
-    this->computerWord = this->wordList.at(random);
+    srand (time(NULL));
+    cout << "RANDOM: " << rand() % length << endl;
+    this->computerWord = this->wordList.at(rand() % length);
     return this->computerWord;
 
 }
